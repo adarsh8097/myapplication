@@ -27,13 +27,14 @@ function SignIn(){
         alert('Coming Soon');
      }
 
+     
       
        const handleSubmit=(e)=>{
         e.preventDefault();
          if(data.email !== "" && data.password !==""){
             if(data.email === userdata.email && data.password === userdata.password){
                 alert("Login Successfully");
-                navigate('/Home');
+                navigate('/item');
             }else{
                 alert("Invalid Credational");
             }
@@ -44,7 +45,7 @@ function SignIn(){
     return(
         <div>
             
-            <div className="container mainpart w-50">
+            <div className="container mainpart w-50 ">
             <form onSubmit={handleSubmit}>
                <div className="container bg-blue-600 login w-50 p-5 drop-shadow-lg">
                <h1 className="text-3xl font-bold sens-serif text-white text-3xl" style={{textAlign:"center",fontFamily:'serif'}}>Login </h1>
@@ -57,7 +58,7 @@ function SignIn(){
                    <button className="btn border text-white font-bold uppercase  w-75 p-2 m-2" style={{letterSpacing:"2px",marginRight:"10px"}}>Submit</button>
                     </div>
                     <div className="m-2">
-                    <a href="/" className="text-white" style={{textDecoration:"none"}}>New User or Sign Up Using..</a>
+                    <a href="/signup" className="text-white" style={{textDecoration:"none"}}>New User or Sign Up Using..</a>
                     </div>
                     <div className="container text-white flex " style={{gap:"10px",marginLeft:"30px",cursor:"pointer"}}>
                      <div className=" p-2 icone bg-blue-900" onClick={handleAlert}>

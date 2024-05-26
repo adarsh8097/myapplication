@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import './ItemDetail.css';
 import HomePage from "../../Home/Homepage";
+import Footer from "../../Footer/Footer";
 
 function ItemDetail() {
     const location = useLocation();
@@ -36,6 +37,7 @@ function ItemDetail() {
                 </div>
             </div>
         </div>
+        <Footer/>
         </>
     );
 }

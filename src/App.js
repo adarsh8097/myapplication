@@ -7,6 +7,7 @@ import HomePage from './Component/Home/Homepage';
 import Item from './Component/Item/Item';
 import ItemDetail from './Component/Item/SingleItem.js/ItemDetail';
 import ConpanyInf from './Component/Conpany/Companyinfo';
+import Footer from './Component/Footer/Footer';
 function App() {
   return (
     <div className="App">
@@ -28,12 +29,13 @@ function App() {
         {/* <h1 className='text-3xl font-bold text-red-400'>This is new reactjs application</h1> */}
        
           <Routes>
-            <Route  path='/' element={<SignUp/>}/>
-            <Route path='/login' element={<SignIn/>}/>
+            <Route  path='/signup' element={<SignUp/>}/>
+            <Route path='/' element={<SignIn/>}/>
             <Route path='/Home' element={<HomePage/>}/>
             <Route path='/Item' element={<Item/>}/>
             <Route path='/Item/:id' element={<ItemDetail/>}/>
             <Route path='/Company'element={<ConpanyInf/>}/>
+            <Route path='/footer' element={<Footer/>}/>
           </Routes>
      
       </div>

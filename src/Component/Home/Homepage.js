@@ -1,9 +1,18 @@
 import React from "react";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import './Homepage.css'; // Assuming you have an external CSS file for styles
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 function HomePage() {
+    // const navigate = useNavigate();
+    //  const LogOut=()=>{
+    //     let userdata= JSON.parse(localStorage.getItem('formdata'));
+    //     console.log("Login userData:",userdata);
+    //     localStorage.clear('formdata');
+        
+      
+    //  }
+    //  LogOut();
     return (
         <nav className="navbar">
             <div className="container-fluid p-1">
@@ -26,7 +35,7 @@ function HomePage() {
                     <li className="nav-item">Posts</li>
                     <li className="nav-item">Feeds</li>
                     <li className="nav-item">News</li>
-                    <li className="nav-item">Login</li>
+                    <li className="nav-item"><Link to={'/signup'} className="text-white" style={{textDecoration:"none"}}>LogOut</Link></li>
                 </ul>
             </div>
         </nav>

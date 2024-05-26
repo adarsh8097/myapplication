@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './item.css'
 import HomePage from "../Home/Homepage";
+import Footer from "../Footer/Footer";
 function Item() {
     const [items, setItems] = useState([]);
     const navigate = useNavigate();
@@ -72,6 +73,7 @@ function Item() {
                 ))}
             </div>
         </div>
+        <Footer/>
         </>
     );
 }

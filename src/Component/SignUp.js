@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import './SignUp.css';
-import { Form } from "react-router-dom";
+import { Form, useNavigate } from "react-router-dom";
 
 function SignUp(){
+    const navigate = useNavigate();
     const[data ,setisData] = useState({
         name:"",
         email:"",
@@ -36,7 +37,7 @@ function SignUp(){
         //    let userdata =  localStorage.setItem('formdata',JSON.stringify(handleData));
          localStorage.setItem('formdata', JSON.stringify(data));
              alert('Register Successfully');
-            //  console.log(userdata);
+             navigate('/');
              }
         }
         else{
@@ -79,7 +80,7 @@ console.log("Prod=fection:",data.profection);
                     <input type="password" id="password" name="password" placeholder="Create Password" value={data.password} onChange={handleInput} minLength={4}/>
                      <label htmlFor="cnfpassword">Cnf-Password</label>
                      <input type="cnf-password" id="cnf-password" name="cnfpassword" placeholder="Please cnf Password" value={data.cnfpassword} onChange={handleInput} minLength={4} />
-                      <p className="text-white p-3"> Already a member ? <a href="/login" className="text-white font-bold " style={{textDecoration:"none"}}>Log In</a></p>
+                      <p className="text-white p-3"> Already a member ? <a href="/" className="text-white font-bold " style={{textDecoration:"none"}}>Log In</a></p>
                      <div>
                         <button className="btn border text-white font-bold uppercase  w-100 p-2 m-2" style={{letterSpacing:"2px"}}>Submit</button>
                      </div>
