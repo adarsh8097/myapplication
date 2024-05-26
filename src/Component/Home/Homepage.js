@@ -35,7 +35,7 @@ function HomePage() {
                     <li className="nav-item">Posts</li>
                     <li className="nav-item">Feeds</li>
                     <li className="nav-item">News</li>
-                    <li className="nav-item"><Link to={'/signup'} className="text-white" style={{textDecoration:"none"}}>LogOut</Link></li>
+                    <li className="nav-item"><Link to={'/'} className="text-white" style={{textDecoration:"none"}}>LogOut</Link></li>
                 </ul>
             </div>
         </nav>

@@ -1,5 +1,6 @@
 import React from "react";
 import HomePage from "../Home/Homepage";
+import Footer from "../Footer/Footer";
 
 function ConpanyInf(){
     return(
@@ -13,6 +14,7 @@ function ConpanyInf(){
                     <p><strong>Email:</strong>: XXXXXX@gmail.com</p>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

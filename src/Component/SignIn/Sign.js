@@ -7,9 +7,10 @@ import { json, useNavigate } from "react-router-dom";
 
 function SignIn(){
      let userdata= JSON.parse(localStorage.getItem('formdata'));
+     console.log( typeof(userdata));
     let navigate = useNavigate();
-     console.log("userData",userdata);
-     console.log("userdataName:",userdata.name);
+    //  console.log("userData",userdata);
+    //  console.log("userdataName:",userdata.name);
       const[data,setisData] = useState({
        email:"",
        password:"",
@@ -32,7 +33,7 @@ function SignIn(){
        const handleSubmit=(e)=>{
         e.preventDefault();
          if(data.email !== "" && data.password !==""){
-            if(data.email === userdata.email && data.password === userdata.password){
+            if(userdata && data.email === userdata.email && data.password === userdata.password){
                 alert("Login Successfully");
                 navigate('/item');
             }else{
@@ -44,7 +45,6 @@ function SignIn(){
        }
     return(
         <div>
-            
             <div className="container mainpart w-50 ">
             <form onSubmit={handleSubmit}>
                <div className="container bg-blue-600 login w-50 p-5 drop-shadow-lg">
@@ -58,7 +58,7 @@ function SignIn(){
                    <button className="btn border text-white font-bold uppercase  w-75 p-2 m-2" style={{letterSpacing:"2px",marginRight:"10px"}}>Submit</button>
                     </div>
                     <div className="m-2">
-                    <a href="/signup" className="text-white" style={{textDecoration:"none"}}>New User or Sign Up Using..</a>
+                    <a href="/signup" className="text-white" style={{textDecoration:"none"}}>New User Sign Up or Using..</a>
                     </div>
                     <div className="container text-white flex " style={{gap:"10px",marginLeft:"30px",cursor:"pointer"}}>
                      <div className=" p-2 icone bg-blue-900" onClick={handleAlert}>
