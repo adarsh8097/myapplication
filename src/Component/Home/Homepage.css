@@ -1,0 +1,51 @@
+/* HomePage.css */
+.navbar {
+    background-color: #1E40AF;
+    position: sticky; /* Tailwind's blue-600 */
+}
+
+.navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.navbar-brand img {
+    max-width: 100px;
+    height: auto;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fcfdfc; /* Tailwind's green-400 */
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+   
+}
+
+.search-input {
+    border: none;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* .nav-item:hover {
+    text-decoration: underline;
+} */
