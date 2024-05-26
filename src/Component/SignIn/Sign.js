@@ -3,7 +3,7 @@ import './Sign.css'
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
 import { IoLogoGoogle } from "react-icons/io";
-import { json, useNavigate } from "react-router-dom";
+import { Link, json, useNavigate } from "react-router-dom";
 
 function SignIn(){
      let userdata= JSON.parse(localStorage.getItem('formdata'));
@@ -58,7 +58,7 @@ function SignIn(){
                    <button className="btn border text-white font-bold uppercase  w-75 p-2 m-2" style={{letterSpacing:"2px",marginRight:"10px"}}>Submit</button>
                     </div>
                     <div className="m-2">
-                    <a href="/signup" className="text-white" style={{textDecoration:"none"}}>New User Sign Up or Using..</a>
+                    <Link to="/signup" className="text-white" style={{textDecoration:"none"}}>New User Sign Up or Using..</Link>
                     </div>
                     <div className="container text-white flex " style={{gap:"10px",marginLeft:"30px",cursor:"pointer"}}>
                      <div className=" p-2 icone bg-blue-900" onClick={handleAlert}>
